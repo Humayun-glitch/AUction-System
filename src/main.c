@@ -7,6 +7,8 @@
 #include "network.h"
 #include "realtime.h"
 #include "error.h"
+#include "server.h"
+#include "client.h"
 
 // Function declarations
 void manage_additional_options(Auction *auction);
@@ -44,7 +46,6 @@ int main() {
         return 1;
     }
 
-    // Display the main menu and handle user input
     int choice;
     do {
         display_main_menu();
@@ -118,6 +119,12 @@ void manage_additional_options(Auction *auction) {
         printf("Invalid option. Please try again.\n");
     }
 }
+    // Start the auction server
+    start_auction_server(&auction);
+
+    // Start the auction client
+    start_auction_client(&auction);
+    // Display the main menu and handle user input
 
 void create_auction_menu(Auction *auction) {
     // Implement logic for creating an auction
