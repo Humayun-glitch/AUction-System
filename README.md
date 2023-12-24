@@ -23,5 +23,8 @@ This is a simple command-line auction system implemented in C. The program allow
 To compile the program, use the following command:
 
 ```bash
+cd Auction-System
+
 gcc -Wall -Werror -pthread -Iinclude src/main.c src/auction.c src/auth.c src/ui.c src/network.c src/realtime.c -o auction_system
+
 ./auction_system
