@@ -4,6 +4,8 @@
 #include <stdbool.h>
 #include "auction.h"
 
+Auction auctions[2];
+
 void initialize_auction(Auction* auction) {
     if (auction == NULL) {
         fprintf(stderr, "Invalid auction for initialization\n");
